@@ -1,16 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
-class WelcomeController extends Controller
+class WelcomeController extends \App\Http\Controllers\Controller
 {
 
     public function index()
     {
-        Log::debug(response());
         return response()->json(
           [
             'name'    => config('app.name').' API',
@@ -22,7 +20,7 @@ class WelcomeController extends Controller
               ],
               [
                 'rel'  => 'api.v1.articles',
-                'href' => route('api.v1.articles'),
+                'href' => '',
               ],
             ],
           ],
