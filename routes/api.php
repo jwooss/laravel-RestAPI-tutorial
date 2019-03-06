@@ -15,8 +15,5 @@ Route::group([
           'uses' => 'WelcomeController@index',
         ]);
 
-        Route::get('/user/profile', function () {
-            return '22test';
-        });
     });
 });
